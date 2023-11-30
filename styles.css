@@ -19,21 +19,40 @@ nav {
   padding: 10px;
 }
 
-button {
+/* Updated styles for LinkedIn button */
+button.linkedin-button {
   display: flex;
   align-items: center;
   width: 100%;
   margin-bottom: 10px;
   padding: 15px;
   font-size: 16px;
-  background-color: #4caf50;
+  background-color: #0e76a8; /* Updated color */
   color: white;
   border: none;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #45a049;
+button.linkedin-button:hover {
+  background-color: #075985; /* Darker shade on hover */
+}
+
+/* Updated styles for GitHub button */
+button.github-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 16px;
+  background-color: lightgray; /* Updated color */
+  color: #333; /* Updated text color */
+  border: none;
+  cursor: pointer;
+}
+
+button.github-button:hover {
+  background-color: #ccc; /* Darker shade on hover */
 }
 
 .resume-button {
@@ -57,8 +76,7 @@ button i {
   margin-right: 10px;
 }
 
-/* Add this to your existing CSS file or in a new style tag in the head section */
-
+/* Updated styles for the icon */
 .icon {
   width: 20px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
