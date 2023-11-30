@@ -1,5 +1,5 @@
-const canvas = document.getElementById('techCanvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("techCanvas");
+const ctx = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -26,4 +26,36 @@ function initializeMesh() {
 
 function drawMesh() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.strokeStyle = 'rgba(255, 255, 255, 
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+  ctx.lineWidth = 1;
+
+  mesh.points.forEach((point, index) => {
+    ctx.beginPath();
+    ctx.arc(point.x, point.y, 1, 0, 2 * Math.PI);
+    ctx.stroke();
+  });
+}
+
+function updateMesh() {
+  mesh.points.forEach((point, index) => {
+    point.x = point.originalX + Math.sin(Date.now() * 0.001 * mesh.speed) * 10;
+    point.y = point.originalY + Math.cos(Date.now() * 0.001 * mesh.speed) * 10;
+  });
+}
+
+function animate() {
+  updateMesh();
+  drawMesh();
+  requestAnimationFrame(animate);
+}
+
+// Initialize and start the animation
+initializeMesh();
+animate();
+
+// Handle window resize
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  initializeMesh();
+});
