@@ -26,7 +26,7 @@ function initializeMesh() {
 
 function drawMesh() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+  ctx.strokeStyle = "rgba(255, 165, 0, 0.5)";
   ctx.lineWidth = 1;
 
   mesh.points.forEach((point, index) => {

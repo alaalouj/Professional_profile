@@ -94,6 +94,19 @@ a i {
   margin-right: 5px; /* Add space to the right of the icon */
 }
 
+a.linkedin-button,
+a.github-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline for linked buttons */
+  color: #ffffff; /* Set text color */
+}
+
+a.linkedin-button:hover,
+a.github-button:hover {
+  background-color: #075985; /* Darker shade on hover */
+}
+
 main {
   background-color: #ffffff; /* Set background color to white */
   padding: 20px;
