@@ -56,3 +56,11 @@ button:hover {
 button i {
   margin-right: 10px;
 }
+
+/* Add this to your existing CSS file or in a new style tag in the head section */
+
+.icon {
+  width: 20px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 5px; /* Add space to the right of the icon */
+}
