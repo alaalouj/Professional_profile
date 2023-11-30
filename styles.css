@@ -19,7 +19,8 @@ nav {
   padding: 10px;
 }
 
-button {
+button,
+a {
   display: flex;
   align-items: center;
   width: 100%;
@@ -30,16 +31,18 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  text-decoration: none; /* Remove underline for linked buttons */
 }
 
-button:hover {
+button:hover,
+a:hover {
   background-color: #45a049;
 }
 
 .resume-button {
   display: block;
-  width: 80%; /* Reducing the width */
-  margin: 20px auto; /* Center the button */
+  width: 80%;
+  margin: 20px auto;
   padding: 15px;
   font-size: 16px;
   background-color: #000;
@@ -53,6 +56,7 @@ button:hover {
 }
 
 /* Adjusting the icon styles */
-button i {
+button i,
+a i {
   margin-right: 10px;
 }
