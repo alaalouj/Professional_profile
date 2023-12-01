@@ -1,20 +1,25 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI"; /* Update font family */
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Hide overflow to prevent scrollbars */
+  overflow: hidden;
 }
 
-canvas {
-  position: absolute;
+#particles-js {
+  height: 100vh; /* Full height of the viewport */
+  background: #242222; /* White background */
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  z-index: -1; /* Place particles behind other elements */
 }
 
 header {
-  background-color: #f2f2f2;
+  background-color: #000;
   padding: 20px;
   text-align: center;
+  color: #ccc;
 }
 
 h1 {
@@ -22,15 +27,17 @@ h1 {
 }
 
 nav {
-  background-color: #ffffff; /* Set background color to white */
+  background-color: #ffffff00; /* Set background color to white */
   padding: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Updated styles for LinkedIn button */
-button.linkedin-button {
+a.linkedin-button {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 98%;
   margin-bottom: 10px;
   padding: 15px;
   font-size: 16px;
@@ -39,17 +46,19 @@ button.linkedin-button {
   border: none;
   cursor: pointer;
   text-decoration: none; /* Remove underline for linked buttons */
+  border-radius: 10px;
 }
 
-button.linkedin-button:hover {
+a.linkedin-button:hover {
   background-color: #075985; /* Darker shade on hover */
+  border-radius: 10px;
 }
 
 /* Updated styles for GitHub button */
-button.github-button {
+a.github-button {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 98%;
   margin-bottom: 10px;
   padding: 15px;
   font-size: 16px;
@@ -57,10 +66,12 @@ button.github-button {
   color: #333; /* Updated text color */
   border: none;
   cursor: pointer;
+  text-decoration: none; /* Remove underline */
+  border-radius: 10px;
 }
 
-button.github-button:hover {
-  background-color: #ccc; /* Darker shade on hover */
+a.github-button:hover {
+  background-color: #aaa; /* Darker shade on hover */
 }
 
 .resume-button {
@@ -94,20 +105,30 @@ a i {
   margin-right: 5px; /* Add space to the right of the icon */
 }
 
-a.linkedin-button,
-a.github-button {
-  display: flex;
-  align-items: center;
-  text-decoration: none; /* Remove underline for linked buttons */
-  color: #ffffff; /* Set text color */
-}
-
-a.linkedin-button:hover,
-a.github-button:hover {
-  background-color: #075985; /* Darker shade on hover */
-}
-
 main {
-  background-color: #ffffff; /* Set background color to white */
+  background-color: #ffffff00; /* Set background color to white */
   padding: 20px;
+}
+
+canvas {
+  display: block;
+}
+
+/* Adjust the color of the particles */
+.particles-js-canvas-el {
+  background-color: #006; /* Tech blue particles background */
+}
+
+.made-by {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: #fff; /* Text color */
+}
+
+.made-by p {
+  margin: 0;
 }
