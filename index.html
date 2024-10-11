@@ -26,23 +26,36 @@
         href="https://github.com/alaalouj"
         target="_blank"
       >
-        <img src="github_logo.png" alt="LinkedIn Logo" class="icon" />
+        <img src="github_logo.png" alt="GitHub Logo" class="icon" />
         <i class="fab fa-github"></i> Visit my GitHub profile
       </a>
     </nav>
     <main>
-      <button
-        class="resume-button"
-        onclick="window.open('./CV Adam.pdf', '_blank')"
-      >
-        Get my resume
-      </button>
+      <div class="resume-dropdown">
+        <button class="resume-button">Get my resume</button>
+        <div class="resume-options" style="display: none">
+          <button onclick="window.open('./CV_Adam_EN.pdf', '_blank')">
+            English
+          </button>
+          <button onclick="window.open('./CV_Adam_FR.pdf', '_blank')">
+            Français
+          </button>
+        </div>
+      </div>
     </main>
     <div class="made-by">
       <p>Made by Adam Laalouj</p>
     </div>
     <script type="text/javascript" src="particles.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script src="script.js"></script>
+    <script>
+      document
+        .querySelector(".resume-button")
+        .addEventListener("click", function () {
+          var options = document.querySelector(".resume-options");
+          options.style.display =
+            options.style.display === "none" ? "block" : "none";
+        });
+    </script>
   </body>
 </html>
